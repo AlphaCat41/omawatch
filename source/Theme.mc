@@ -21,6 +21,7 @@ module Theme {
     var textSize as Number = 0;
 
     function load() as Void {
+        var slotSize = 31;
         themeIndex = Cfg.THEME >= 0 ? Cfg.THEME : num("Theme", 0);
         if (themeIndex < 0 || themeIndex >= Palettes.COLOURS.size()) { themeIndex = 0; }
         layout = num("Layout", Cfg.LAYOUT);
@@ -28,7 +29,7 @@ module Theme {
         slots = Cfg.SLOTS.size() == 4 ? Cfg.SLOTS
                                       : [num("Slot1", 0), num("Slot2", 1), num("Slot3", 2), num("Slot4", 3)];
         for (var i = 0; i < slots.size(); i++) {
-            if (slots[i] < 0 || slots[i] > 30) { slots[i] = 0; }
+            if (slots[i] < 0 || slots[i] > slotSize) { slots[i] = 0; }
         }
         topBar = num("TopBar", 0);
         if (topBar < 0 || topBar > 10) { topBar = 0; }

@@ -15,13 +15,13 @@ module SettingsMenu {
                     "VO2 max run", "VO2 max bike", "Weekly run distance", "Weekly bike distance",
                     "Pressure", "Calories", "Respiration rate", "Pulse ox", "Sleep score", "Recovery time",
                     "Notifications", "Race time 5K", "Race time 10K", "Race time half", "Race time marathon",
-                    "Feels like", "Humidity", "Wind speed", "Rain chance"];
+                    "Feels like", "Humidity", "Wind speed", "Rain chance", "Heart rate / Resting heart rate"];
 
     const GROUPS = ["Vitals", "Activity", "Fitness", "Weather", "Watch"];
 
     // The row values of each group, as indexes into VALUES.
     const GROUP_VALUES = [
-        [0, 1, 7, 19, 18, 20, 21],
+        [0, 1, 7, 19, 18, 20, 21, 31],
         [3, 6, 8, 9, 10, 11, 17, 14, 15],
         [12, 13, 23, 24, 25, 26],
         [4, 27, 28, 29, 30, 16, 2],

@@ -6,12 +6,14 @@ import Toybox.Activity;
 import Toybox.ActivityMonitor;
 import Toybox.Application;
 import Toybox.Position;
+using Toybox.UserProfile;
 
 // All watch values, read at most once a minute. In high power mode the face
 // redraws every second, so onUpdate must never read a sensor.
 module Data {
 
     var hr as Number or Null = null;
+    var rhr as Number or Null = null;
     var bb as Number or Null = null;
     var stress as Number or Null = null;
     var elev as Number or Null = null;
@@ -64,9 +66,13 @@ module Data {
         }
 
         var act = Activity.getActivityInfo();
+        var profile = UserProfile.getProfile();
         if (act != null) {
             if (act.currentHeartRate != null) { hr = act.currentHeartRate as Number; }
             if (act.altitude != null) { elev = (act.altitude as Float).toNumber(); }
+        }
+        if (profile != null) {
+            if (profile.restingHeartRate != null) { rhr = profile.restingHeartRate as Number; }
         }
 
         readSensorHistory();
@@ -465,7 +471,7 @@ module Data {
     function slotLabel(slot as Number) as String {
         var names = ["hr", "bb", "elev", "steps", "temp", "bat", "floors", "stress", "goal", "steps", "floors", "active",
                      "vo2", "vo2b", "run", "bike", "baro", "cal", "resp", "spo2", "sleep", "recov", "notif",
-                     "5k", "10k", "half", "mara", "feels", "hum", "wind", "rain"];
+                     "5k", "10k", "half", "mara", "feels", "hum", "wind", "rain", "hr/rhr"];
         return slot >= 0 && slot < names.size() ? names[slot] : "";
     }
 
@@ -502,6 +508,7 @@ module Data {
             case 28: return numText(humidity);
             case 29: return windText();
             case 30: return numText(precip);
+            case 31: return numText(hr) + "/" + numText(rhr);
         }
         return "";
     }

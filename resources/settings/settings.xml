@@ -118,6 +118,7 @@
             <listEntry value="28">@Strings.ValueHumidity</listEntry>
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
+            <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
         </settingConfig>
     </setting>
 
@@ -154,6 +155,7 @@
             <listEntry value="28">@Strings.ValueHumidity</listEntry>
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
+            <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
         </settingConfig>
     </setting>
 
@@ -190,6 +192,7 @@
             <listEntry value="28">@Strings.ValueHumidity</listEntry>
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
+            <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
         </settingConfig>
     </setting>
 
@@ -226,6 +229,7 @@
             <listEntry value="28">@Strings.ValueHumidity</listEntry>
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
+            <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
         </settingConfig>
     </setting>
 
