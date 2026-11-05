@@ -119,6 +119,7 @@
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
             <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
+            <listEntry value="32">@Strings.ValueSteps_Dist</listEntry>
         </settingConfig>
     </setting>
 
@@ -156,6 +157,7 @@
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
             <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
+            <listEntry value="32">@Strings.ValueSteps_Dist</listEntry>
         </settingConfig>
     </setting>
 
@@ -193,6 +195,7 @@
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
             <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
+            <listEntry value="32">@Strings.ValueSteps_Dist</listEntry>
         </settingConfig>
     </setting>
 
@@ -230,6 +233,7 @@
             <listEntry value="29">@Strings.ValueWind</listEntry>
             <listEntry value="30">@Strings.ValueRain</listEntry>
             <listEntry value="31">@Strings.ValueHR_RHr</listEntry>
+            <listEntry value="32">@Strings.ValueSteps_Dist</listEntry>
         </settingConfig>
     </setting>
 

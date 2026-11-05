@@ -25,6 +25,7 @@ module Data {
     var activeWeekGoal as Number or Null = null;
     var temp as Number or Null = null;
     var bat as Number = 0;
+    var dist as Number = 0;
 
     // Weather extras
     var feels as Number or Null = null;
@@ -63,6 +64,7 @@ module Data {
             }
             if (am has :activeMinutesWeekGoal && am.activeMinutesWeekGoal != null) { activeWeekGoal = am.activeMinutesWeekGoal as Number; }
             if (am has :stressScore && am.stressScore != null) { stress = am.stressScore as Number; }
+            if (am has :distance && am.distance != null) { dist = am.distance as Number; }
         }
 
         var act = Activity.getActivityInfo();
@@ -471,7 +473,7 @@ module Data {
     function slotLabel(slot as Number) as String {
         var names = ["hr", "bb", "elev", "steps", "temp", "bat", "floors", "stress", "goal", "steps", "floors", "active",
                      "vo2", "vo2b", "run", "bike", "baro", "cal", "resp", "spo2", "sleep", "recov", "notif",
-                     "5k", "10k", "half", "mara", "feels", "hum", "wind", "rain", "hr/rhr"];
+                     "5k", "10k", "half", "mara", "feels", "hum", "wind", "rain", "hr/rhr", "steps"];
         return slot >= 0 && slot < names.size() ? names[slot] : "";
     }
 
@@ -509,6 +511,7 @@ module Data {
             case 29: return windText();
             case 30: return numText(precip);
             case 31: return numText(hr) + "/" + numText(rhr);
+            case 32: return numText(steps) + "/" + distText(dist);
         }
         return "";
     }
@@ -531,6 +534,7 @@ module Data {
             case 28: return "%";
             case 29: return useMiles() ? " mph" : " kmh";
             case 30: return "%";
+            case 32: return distUnitText();
         }
         return "";
     }

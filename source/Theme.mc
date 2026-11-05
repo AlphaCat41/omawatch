@@ -21,7 +21,7 @@ module Theme {
     var textSize as Number = 0;
 
     function load() as Void {
-        var slotSize = 31;
+        var slotSize = 32;
         themeIndex = Cfg.THEME >= 0 ? Cfg.THEME : num("Theme", 0);
         if (themeIndex < 0 || themeIndex >= Palettes.COLOURS.size()) { themeIndex = 0; }
         layout = num("Layout", Cfg.LAYOUT);

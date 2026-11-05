@@ -68,6 +68,7 @@
     <string id="ValueWind">Wind speed</string>
     <string id="ValueRain">Rain chance</string>
     <string id="ValueHR_RHr">Heart rate / Resting heart rate</string>
+    <string id="ValueSteps_Dist">Steps / Distance</string>
 
     <string id="TopBarTitle">Top bar</string>
     <string id="TopBar0">Daylight</string>
