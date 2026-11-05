@@ -64,7 +64,7 @@ module Data {
             }
             if (am has :activeMinutesWeekGoal && am.activeMinutesWeekGoal != null) { activeWeekGoal = am.activeMinutesWeekGoal as Number; }
             if (am has :stressScore && am.stressScore != null) { stress = am.stressScore as Number; }
-            if (am has :distance && am.distance != null) { dist = am.distance as Number; }
+            if (am has :distance && am.distance != null) { dist = am.distance as Number; dist = dist / 100;}
         }
 
         var act = Activity.getActivityInfo();
